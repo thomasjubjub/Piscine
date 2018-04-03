@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1514144174 source:c:\users\domin\documents\code blocks\projet_piscine2\main.cpp
+	<iostream>
+
+1522768402 source:c:\users\domin\documents\code blocks\projet_piscine2\influence.cpp
+	"Influence.h"
+
+1522768337 c:\users\domin\documents\code blocks\projet_piscine2\influence.h
+	"Espece.h"
+
+1522768153 c:\users\domin\documents\code blocks\projet_piscine2\espece.h
+	<string>
+
+1522768153 source:c:\users\domin\documents\code blocks\projet_piscine2\espece.cpp
+	"Espece.h"
+	<string>
+
+1522768611 source:c:\users\domin\documents\code blocks\projet_piscine2\ecosysteme.cpp
+	"Ecosysteme.h"
+	<iostream>
+	<vector>
+	<fstream>
+
+1522768240 c:\users\domin\documents\code blocks\projet_piscine2\ecosysteme.h
+	"Influence.h"
+	<vector>
+
+1522771258 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\ecosysteme.cpp
+	"Ecosysteme.h"
+	<iostream>
+	<vector>
+	<fstream>
+
+1522771258 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\ecosysteme.h
+	"Influence.h"
+	<vector>
+
+1522769068 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\influence.h
+	"Espece.h"
+
+1522769068 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\espece.h
+	<string>
+
+1522769068 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\espece.cpp
+	"Espece.h"
+	<string>
+
+1522769068 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\influence.cpp
+	"Influence.h"
+
+1522769068 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\main.cpp
+	<iostream>
+	"Ecosysteme.h"
+
+1522771881 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\allegro.cpp
+	"allegro.h"
+	<iostream>
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+
+1522772713 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\projet_piscine2\allegro.h
+	<allegro.h>
+
