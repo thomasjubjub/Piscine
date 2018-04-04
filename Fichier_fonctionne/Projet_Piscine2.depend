@@ -79,3 +79,30 @@
 	<vector>
 	<fstream>
 
+1522770854 source:c:\users\domin\piscine\fichier_fonctionne\espece.cpp
+	"Espece.h"
+	<string>
+
+1522772264 c:\users\domin\piscine\fichier_fonctionne\espece.h
+	<string>
+
+1522768404 source:c:\users\domin\piscine\fichier_fonctionne\influence.cpp
+	"Influence.h"
+
+1522770308 c:\users\domin\piscine\fichier_fonctionne\influence.h
+	"Espece.h"
+
+1522831890 source:c:\users\domin\piscine\fichier_fonctionne\main.cpp
+	<iostream>
+	"Ecosysteme.h"
+
+1522831082 c:\users\domin\piscine\fichier_fonctionne\ecosysteme.h
+	"Influence.h"
+	<vector>
+
+1522835806 source:c:\users\domin\piscine\fichier_fonctionne\ecosysteme.cpp
+	"Ecosysteme.h"
+	<iostream>
+	<vector>
+	<fstream>
+

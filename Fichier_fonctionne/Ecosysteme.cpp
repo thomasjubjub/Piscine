@@ -70,7 +70,7 @@ void Ecosysteme:: Evolution_Temporelle()
 {
     int taille;
     //vector<Influence*>::iterator it;
-    taille=vecEspece.size();
+    taille=vecEspece.size()-1;
     int quotient=0;
     int e1;
     ///a tout modifier sommet* vecit->e1
@@ -88,10 +88,12 @@ void Ecosysteme:: Evolution_Temporelle()
 //            taille--;
 //        }
 //    }
-
-    for(int i=vecInfluence.size(); i>=0; i--)
+cout<<"je suis avant le for"<<endl;
+    for(int i=vecInfluence.size()-1; i>=0; i--)
     {
-        if(vecInfluence[i]->m_e2==taille && taille>=0)
+        cout<<"je suis la avant le if"<<endl;
+        do{
+        if(vecInfluence[i]->m_e2==taille)
         {
             e1=vecInfluence[i]->m_e1;
              vecEspece[e1]->m_K=(vecInfluence[i]->m_coefficient)*(vecEspece[taille]->m_N);
@@ -100,8 +102,9 @@ void Ecosysteme:: Evolution_Temporelle()
 
             vecEspece[e1]->m_N=(vecEspece[e1]->m_N)+(vecEspece[e1]->m_N)*(vecEspece[e1]->m_r)*(1-quotient);
 
-        }C:\Users\domin\Documents\Code Blocks\Projet_Piscine2\Ecosysteme.cpp
+        }
         taille--;
+        }while(taille>=0);
     }
 
 
