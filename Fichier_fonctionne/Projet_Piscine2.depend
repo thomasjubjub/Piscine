@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1514144174 source:c:\users\domin\documents\code blocks\projet_piscine2\main.cpp
+	<iostream>
+
+1522768402 source:c:\users\domin\documents\code blocks\projet_piscine2\influence.cpp
+	"Influence.h"
+
+1522768337 c:\users\domin\documents\code blocks\projet_piscine2\influence.h
+	"Espece.h"
+
+1522768153 c:\users\domin\documents\code blocks\projet_piscine2\espece.h
+	<string>
+
+1522768153 source:c:\users\domin\documents\code blocks\projet_piscine2\espece.cpp
+	"Espece.h"
+	<string>
+
+1522768611 source:c:\users\domin\documents\code blocks\projet_piscine2\ecosysteme.cpp
+	"Ecosysteme.h"
+	<iostream>
+	<vector>
+	<fstream>
+
+1522768240 c:\users\domin\documents\code blocks\projet_piscine2\ecosysteme.h
+	"Influence.h"
+	<vector>
+
+1522772214 source:c:\users\anne-lise hervé\desktop\projet_piscine2\ecosysteme.cpp
+	"Ecosysteme.h"
+	<iostream>
+	<vector>
+	<fstream>
+
+1522769273 c:\users\anne-lise hervé\desktop\projet_piscine2\ecosysteme.h
+	"Influence.h"
+	<vector>
+
+1522770307 c:\users\anne-lise hervé\desktop\projet_piscine2\influence.h
+	"Espece.h"
+
+1522772263 c:\users\anne-lise hervé\desktop\projet_piscine2\espece.h
+	<string>
+
+1522770853 source:c:\users\anne-lise hervé\desktop\projet_piscine2\espece.cpp
+	"Espece.h"
+	<string>
+
+1522768404 source:c:\users\anne-lise hervé\desktop\projet_piscine2\influence.cpp
+	"Influence.h"
+
+1522770328 source:c:\users\anne-lise hervé\desktop\projet_piscine2\main.cpp
+	<iostream>
+	"Ecosysteme.h"
+
+1522770854 source:c:\users\domin\documents\code blocks\fichier fonctionne\espece.cpp
+	"Espece.h"
+	<string>
+
+1522772264 c:\users\domin\documents\code blocks\fichier fonctionne\espece.h
+	<string>
+
+1522768404 source:c:\users\domin\documents\code blocks\fichier fonctionne\influence.cpp
+	"Influence.h"
+
+1522770308 c:\users\domin\documents\code blocks\fichier fonctionne\influence.h
+	"Espece.h"
+
+1522831890 source:c:\users\domin\documents\code blocks\fichier fonctionne\main.cpp
+	<iostream>
+	"Ecosysteme.h"
+
+1522831082 c:\users\domin\documents\code blocks\fichier fonctionne\ecosysteme.h
+	"Influence.h"
+	<vector>
+
+1522832275 source:c:\users\domin\documents\code blocks\fichier fonctionne\ecosysteme.cpp
+	"Ecosysteme.h"
+	<iostream>
+	<vector>
+	<fstream>
+
