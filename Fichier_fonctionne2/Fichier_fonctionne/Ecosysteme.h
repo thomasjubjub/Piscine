@@ -22,6 +22,12 @@ public:
 
     void Charger_Fichier(string nom_fichier);
     void Affichage_ecosyst();
+    void Evolution_Temporelle();
+    void Supprimer_Espece ();
+    void Ajouter_Espece ();
+    ///Faire Sauvegarde Fichier
+    ///Penser à mettre un numéro pour connaitre l'ordre de réécriture ?
+    /// Evolution dans le temps (à voir avec les temps de pauses
 };
 
 

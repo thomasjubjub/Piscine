@@ -14,7 +14,7 @@ Influence::Influence(int e1, int e2, float coef)
 {
     m_e1=e1;
     m_e2=e2;
-    m_coefficient=coef;
+    m_coefficient=(1/coef);
 }
 
 Influence::~Influence()
