@@ -1,0 +1,14 @@
+6
+grand_requin 100 0.1 22
+thon 100 0.2 80
+maquereaux 13 0.01 50
+petits_poissons 100 0.1 90
+crevettes 100 0.0001 32
+organismes_unicellulaires 100 0.02 30
+6
+0 1 100
+1 2 100
+1 3 28.125
+2 3 100
+3 4 100
+4 5 100
