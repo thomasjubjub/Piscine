@@ -142,110 +142,49 @@ void Ecosysteme:: Evolution_Temporelle()
 
 
     for(int i=0; i<vecEspece.size(); i++)
-    {
+   {
         for (it = vecInfluence.begin(); it!=  vecInfluence.end(); it ++)
         {
-            if((*it)->m_e1==i)
+            if((*it)->m_e2==i)
             {
                 successeurs=successeurs+1;
             }
         }
 
-    }
+
 
     if(successeurs==1)
     {
         for (it = vecInfluence.begin(); it!=  vecInfluence.end(); it ++)
         {
-            if((*it)->m_e1==i)
+            if((*it)->m_e2==i)
             {
-                vecEspece[i]->m_N=((vecEspece[i]->m_N)+((vecEspece[i]->m_N)*(vecEspece[i]->m_r)*(1-((vecEspece[i]->m_N)/(vecEspece[i]->m_K))))-((*it)->m_coefficient*vecEspece[(*it)->m_e2]->m_N);
+                vecEspece[i]->m_N=(vecEspece[i]->m_N)+((vecEspece[i]->m_N)*(vecEspece[i]->m_r)*(1-((vecEspece[i]->m_N)/(vecEspece[i]->m_K))))-((*it)->m_coefficient*vecEspece[(*it)->m_e1]->m_N);
             }
         }
 
     }
-    else if (successeurs<1)
+    else if (successeurs>1)
     {
+        vecEspece[i]->m_N=(vecEspece[i]->m_N)+((vecEspece[i]->m_N)*(vecEspece[i]->m_r)*(1-((vecEspece[i]->m_N)/(vecEspece[i]->m_K))));
+        for(it = vecInfluence.begin(); it!=  vecInfluence.end(); it ++)
+        {
+            if((*it)->m_e2==i)
+            {
+                vecEspece[i]->m_N=(vecEspece[i]->m_N)-((*it)->m_coefficient*vecEspece[(*it)->m_e1]->m_N);
+            }
+        }
 
     }
-
-    //vecEspece[i]->m_N = vecEspece
-
-//        cout<<"la valeur de i est "<<i<<endl;
-
-//
-//        vecEspece[e1]->m_K=0;
-
-//            if(it->)
-//
-//
-
-//            ///on calcul le K de e1 en fonction du nombre de predecesseurs
-//            for(int c=0; c<predecesseurs; c++)
-//            {
-//                vecEspece[e1]->m_K=(vecEspece[e1]->m_K)+(((vecInfluence[i]->m_coefficient))*(vecEspece[e2]->m_N));
-//            }
-//            ///on calcul le N de e1
-//            quotient=(vecEspece[e1]->m_N)/(vecEspece[e1]->m_K);
-//            vecEspece[e1]->m_N=(vecEspece[e1]->m_N)+(vecEspece[e1]->m_N*vecEspece[e1]->m_r)*(1-quotient);
-
+    if(vecEspece[i]->m_N<0)
+    {
+       vecEspece[i]->m_N=0;
+    }
+   }
 
 }
 
 
-
-
-//
-
-//j=i--;
-//        cout<<"je suis la avant le if"<<endl;
-//        do
-//        {
-//            ///Si il bouffe 2 mecs ou pas
-//            if(vecInfluence[i]->m_e2==taille || vecInfluence[i]->m_e2==doublons)
-//            {
-//                e1=vecInfluence[i]->m_e1;
-//
-//                if((vecInfluence[i]->m_e1)==(vecInfluence[j]->m_e1))
-//                {
-//                    vecEspece[e1]->m_K=((vecInfluence[i]->m_coefficient)*(vecEspece[taille]->m_N))+((vecInfluence[j]->m_coefficient)*(vecEspece[taille--]->m_N));
-//                }
-//                else
-//                {
-//                    vecEspece[e1]->m_K=(vecInfluence[i]->m_coefficient)*(vecEspece[taille]->m_N);
-//
-//                }
-//                quotient=(vecEspece[e1]->m_N)/(vecEspece[e1]->m_K);
-//                vecEspece[e1]->m_N=(vecEspece[e1]->m_N)+(vecEspece[e1]->m_N)*(vecEspece[e1]->m_r)*(1-quotient);
-//
-//                cout<<"apres le premier if"<<endl;
-//
-//                ///Si il se fait bouffer par 2
-////
-//                if((vecInfluence[i]->m_e2)==(vecInfluence[j]->m_e2))
-//                {
-//                     e2=vecInfluence[i]->m_e2;
-//
-//                     cout<<"dans le deuxieme if"<<endl;
-//                    vecEspece[e2]->m_N=(vecEspece[e2]->m_N)+((vecEspece[e2]->m_N)*(vecEspece[e2]->m_r)*(1-quotient));
-//
-//                    cout<<"fin de calcul du n"<<endl;
-//
-//                    vecEspece[e2]->m_N=(vecEspece[e2]->m_N)-((vecInfluence[i]->m_coefficient*vecEspece[j]->m_N)+(vecInfluence[j]->m_coefficient*vecEspece[j--]->m_N));
-//                    cout<<"avant le deuxieme else"<<endl;
-//
-//                }
-//                else
-//                {
-//                    cout<<"dans le else du deuxieme if"<<endl;
-//                    vecEspece[e2]->m_N=(vecEspece[e2]->m_N)+(vecEspece[e2]->m_N)*(vecEspece[e2]->m_r)*(1-quotient);
-//                }
-
-
-
-
-//        }
-//        while(taille>=0);
 
 
 
