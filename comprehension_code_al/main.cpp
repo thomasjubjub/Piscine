@@ -15,25 +15,43 @@ int main()
     Ecosysteme g;
     int demande;
 
-//    std::cout<<"quel Ecosystemee ?";
-//    std::cin>>demande;
-//    if(demande==1)
-    g.make_example2();
-//
-//    else if (demande==2)
-//        g.make_example2();
+    Ecosysteme eco1;
+    std::string nom_syst="Eco1";
+    eco1.Charger_Fichier(nom_syst);
+    eco1.Affichage_ecosyst();
+    //eco1.ecosysteme1();
+    eco1.Supprimer_Espece();
+    eco1.ecosysteme1();
 
-    /// Vous gardez la main sur la "boucle de jeu"
-    /// ( contrairement à des frameworks plus avancés )
     while ( !key[KEY_ESC] )
     {
         /// Il faut appeler les méthodes d'update des objets qui comportent des widgets
-        g.update();
+        eco1.update();
 
         /// Mise à jour générale (clavier/souris/buffer etc...)
         grman::mettre_a_jour();
 
     }
+
+//    std::cout<<"quel Ecosystemee ?";
+//    std::cin>>demande;
+//    if(demande==1)
+  //  g.make_example2();
+//
+//    else if (demande==2)
+//        g.make_example2();
+
+//    /// Vous gardez la main sur la "boucle de jeu"
+//    /// ( contrairement à des frameworks plus avancés )
+//    while ( !key[KEY_ESC] )
+//    {
+//        /// Il faut appeler les méthodes d'update des objets qui comportent des widgets
+//        g.update();
+//
+//        /// Mise à jour générale (clavier/souris/buffer etc...)
+//        grman::mettre_a_jour();
+//
+//    }
 
     grman::fermer_allegro();
 

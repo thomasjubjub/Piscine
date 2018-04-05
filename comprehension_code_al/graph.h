@@ -258,7 +258,7 @@ class Influence
 
         /// Les constructeurs sont à compléter selon vos besoin...
         /// Ici on ne donne qu'un seul constructeur qui peut utiliser une interface
-        Influence (double weight=0, InfluenceInterface *interface=nullptr) :
+        Influence (float weight=0, InfluenceInterface *interface=nullptr) :
             m_weight(weight), m_interface(interface)  {  }
 
 
@@ -345,9 +345,16 @@ class Ecosysteme
         Ecosysteme (EcosystemeInterface *interface=nullptr) :
             m_interface(interface)  {  }
 
+
+        void Charger_Fichier(std::string nom_fichier);
+        void Affichage_ecosyst();
+
+        void ecosysteme1();
+        void Supprimer_Espece ();
+
         void sauvergarde_coords(std::string blaz);
         void add_interfaced_Espece(int idx, int value, int x, int y, std::string pic_name="", int pic_idx=0 );
-        void add_interfaced_Influence(int idx, int vert1, int vert2, double weight=0);
+        void add_interfaced_Influence(int idx, int vert1, int vert2, float weight);
 
         /// Méthode spéciale qui construit un Ecosystemee arbitraire (démo)
         /// Voir implémentation dans le .cpp

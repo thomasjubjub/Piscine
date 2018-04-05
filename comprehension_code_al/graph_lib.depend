@@ -170,3 +170,62 @@
 	<iostream>
 	"graph.h"
 
+1522923140 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\coords.cpp
+	"coords.h"
+
+1522923140 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\coords.h
+	<cmath>
+
+1522925326 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522925326 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522923140 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\grman_couleurs.h
+
+1522934875 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522924223 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\widget.cpp
+	"widget.h"
+
+1522937180 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\graph.cpp
+	"Graph.h"
+	<fstream>
+	<string>
+
+1522937092 c:\users\anne-lise hervé\piscine\comprehension_code_al\graph.h
+	<vector>
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+	"grman/widget.h"
+
+1522937442 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"Graph.h"
+

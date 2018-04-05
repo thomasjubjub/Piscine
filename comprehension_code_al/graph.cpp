@@ -27,6 +27,7 @@ EspeceInterface::EspeceInterface(int idx, int x, int y, std::string pic_name, in
     m_top_box.set_dim(130, 100); //pas toucher
     m_top_box.set_moveable(); //declaration en true ce qui permet de bouger les widget
 
+    ///Slider VALUE !!!
     // Le slider de réglage de valeur
     m_top_box.add_child( m_slider_value );
     m_slider_value.set_range(0.0 , 100.0); // Valeurs arbitraires, à adapter...
@@ -34,7 +35,7 @@ EspeceInterface::EspeceInterface(int idx, int x, int y, std::string pic_name, in
     m_slider_value.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Up);
 
     // Label de visualisation de valeur
-    m_top_box.add_child( m_label_value );
+    m_top_box.add_child(m_label_value);
     m_label_value.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Down);
 
     // Une illustration...
@@ -111,7 +112,7 @@ Influence::Influence(int e1, int e2, float coef)
 {
     m_e1=e1;
     m_e2=e2;
-    m_coefficient=(1/coef);
+    m_coefficient=(coef);
 }
 /// Le constructeur met en place les éléments de l'interface
 InfluenceInterface::InfluenceInterface(Espece& from, Espece& to)
@@ -188,6 +189,59 @@ Ecosysteme::~Ecosysteme()
 
 }
 
+void Ecosysteme::Charger_Fichier(std::string nom_fichier)
+{
+    std::string extension = nom_fichier + ".txt";
+
+    int e1, e2, n, K;
+    float r,coef;
+    std::string nom;
+    std::string lala;
+    std::ifstream fichier(extension.c_str(), std::ios::in);
+
+    if(fichier)
+    {
+        do
+        {
+            fichier >> m_nombre_espece;
+
+            for(int i=0; i<m_nombre_espece; i++)
+            {
+                fichier >> nom >> n >> r >> K;
+                vecEspece.push_back(new Espece(nom, n, r, K));
+            }
+
+
+            fichier >> m_nombre_influence;
+
+            for(int i=0; i<m_nombre_influence; i++)
+            {
+                fichier >> e1 >> e2 >> coef;
+                vecInfluence.push_back(new Influence(e1, e2, coef));
+            }
+
+        }
+        while (fichier.good());
+    }
+
+}
+
+void Ecosysteme :: Affichage_ecosyst()
+{
+    for (int i = 0; i<vecEspece.size (); i++)
+    {
+        std::cout << vecEspece [i]->m_nom << "  " << vecEspece [i]->m_N << "  " <<vecEspece [i]->m_r << "  " << vecEspece [i]->m_K << std::endl;
+    }
+
+    for (int i=0; i< vecInfluence.size(); i++)
+    {
+        std::cout << vecInfluence [i]->m_e1 << "  " << vecInfluence [i]->m_e2 << "  et le coef " << vecInfluence [i]->m_coefficient << std::endl;
+    }
+    std::cout << std::endl;
+    std::cout << std::endl;
+}
+
+
 
 EcosystemeInterface::EcosystemeInterface(int x, int y, int w, int h)
 {
@@ -226,6 +280,49 @@ void Ecosysteme::sauvergarde_coords( std::string blaz)
     }
 
 }
+
+void Ecosysteme::ecosysteme1()
+{
+    m_interface = std::make_shared<EcosystemeInterface>(50, 0, 750, 600);
+    for (int i=0; i<vecEspece.size(); i++)
+    {
+        if (vecEspece[i]->m_N >0)
+        {
+    add_interfaced_Espece(i, vecEspece[i]->m_N, 50+(i*50), 50+(i*50), (vecEspece[i]->m_nom)+".jpg");
+     }
+    }
+
+    for (int i=0; i<vecInfluence.size(); i++)
+    {
+        if ((vecEspece[vecInfluence[i]->m_e1]-> m_N > 0) && (vecEspece[vecInfluence[i]->m_e2]->m_N >0 ))
+        {
+        add_interfaced_Influence(i, vecInfluence[i]->m_e1, vecInfluence[i]->m_e2, vecInfluence[i]->m_coefficient);
+        }
+    }
+
+}
+
+
+void Ecosysteme :: Supprimer_Espece ()
+{
+    std::vector <Espece*> :: iterator it;
+    std::string Espece_sup;
+    std:: cout << "Quel animal veux-tu supprimer:" << std::endl;
+    std::cin >> Espece_sup ;
+
+    for (it=vecEspece.begin(); it!= vecEspece.end();it++ )
+    {
+        if ((*it)->m_nom == Espece_sup )
+        {
+            (*it)->m_N = 0;
+        }
+    }
+}
+
+
+
+///Domi: sauvegarder données fichier, Thomas chargement des dernières coordonnées
+
 void Ecosysteme::make_example()
 {
     m_interface = std::make_shared<EcosystemeInterface>(50, 0, 750, 600);
@@ -332,7 +429,7 @@ void Ecosysteme::add_interfaced_Espece(int idx, int value, int x, int y, std::st
 }
 
 /// Aide à l'ajout d'arcs interfacés
-void Ecosysteme::add_interfaced_Influence(int idx, int id_vert1, int id_vert2, double weight)
+void Ecosysteme::add_interfaced_Influence(int idx, int id_vert1, int id_vert2, float weight)
 {
     if ( m_Influences.find(idx)!=m_Influences.end() )
     {

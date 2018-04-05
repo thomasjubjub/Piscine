@@ -217,10 +217,12 @@ class WidgetText : public Widget
         int m_color = NOIR;
         FONT *m_font = font;
         bool m_vertical = false;
+        int m_nbindividus;
 
     public :
-        WidgetText(std::string message="") { m_border=m_padding=0; set_message(message); }
+        WidgetText(std::string message="") { m_border=m_padding=0; set_message(message);}
         virtual void draw();
+        //WidgetText(int nbindividus, std::string message="") {m_nbindividus=nbindividus=43; m_border=m_padding=0; set_message (message);}
 
         int getcolor() {return m_color;}
         int setcolor(int color) {m_color=color;}
