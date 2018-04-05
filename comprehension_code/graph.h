@@ -51,7 +51,7 @@
 
     C'est cette 2ème approche qui est proposée ici : dans la classe graphe vous trouverez
         -> map<int, Influence>   m_Influences
-        -> map<int, Espece> m_vertices    (le pluriel de Espece est vertices)
+        -> map<int, Espece> m_Espece    (le pluriel de Espece est vertices)
 
     Il faudra être attentif au fait que par rapport à un simple vecteur, le parcours des éléments
     ne pourra PAS se faire avec un simple for (int i=0; i<m_Influences.size(); ++i) ...m_Influences[i]...
@@ -103,10 +103,10 @@ class EspeceInterface
         grman::WidgetBox m_top_box;
 
         // Un slider de visualisation/modification de la valeur du sommet
-        grman::WidgetVSlider m_slider_value; ///modif nombre d'individus
+        grman::WidgetVSlider m_slider_N; ///modif nombre d'individus
 
         // Un label de visualisation de la valeur du sommet
-        grman::WidgetText m_label_value; ///nombre d'individus
+        grman::WidgetText m_label_N; ///nombre d'individus
 
         // Une image de "remplissage"
         grman::WidgetImage m_img;
@@ -154,7 +154,7 @@ class Espece
     float m_r; //rythme de croissance
 
         /// un exemple de donnée associée à l'arc, on peut en ajouter d'autres...
-        double m_value;
+       // double m_N;
 
         /// le POINTEUR sur l'interface associée, nullptr -> pas d'interface
         std::shared_ptr<EspeceInterface> m_interface = nullptr;
@@ -168,13 +168,16 @@ class Espece
 
         /// Les constructeurs sont à compléter selon vos besoin...
         /// Ici on ne donne qu'un seul constructeur qui peut utiliser une interface
-        Espece (double value=100, EspeceInterface *interface=nullptr) :
-            m_value(value), m_interface(interface)  {  }
+        Espece (int N, EspeceInterface *interface=nullptr) :
+            m_N(N), m_interface(interface)  {  }
 
         ///Constructeurs/Destructeurs
+        Espece();
         ~Espece();
-        Espece(string nom, int N, float r, int K);
-        string getnom();
+        Espece(std::string nom, int N, float r, int K, EspeceInterface *interface=nullptr):
+            m_N(N), m_nom(nom), m_r(r), m_K(K), m_interface(interface) {}
+
+        std::string getnom();
         int getN();
         float getr();
         int getK();
@@ -318,7 +321,7 @@ class Graph
         std::map<int, Influence> m_Influences;
 
         /// La liste des sommets
-        std::map<int, Espece> m_vertices;
+        std::map<int, Espece> m_Espece;
 
         /// le POINTEUR sur l'interface associée, nullptr -> pas d'interface
         std::shared_ptr<GraphInterface> m_interface = nullptr;
@@ -334,7 +337,7 @@ class Graph
             m_interface(interface)  {  }
 
         void sauvergarde_coords(std::string blaz);
-        void add_interfaced_Espece(int idx, double value, int x, int y, std::string pic_name="", int pic_idx=0 );
+        void add_interfaced_Espece(int idx, double N, int x, int y, std::string pic_name="", int pic_idx=0 );
         void add_interfaced_Influence(int idx, int vert1, int vert2, double weight=0);
 
         /// Méthode spéciale qui construit un graphe arbitraire (démo)

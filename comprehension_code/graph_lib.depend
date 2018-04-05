@@ -112,3 +112,61 @@
 	<iostream>
 	"graph.h"
 
+1522924756 source:c:\users\thomas\piscine\comprehension_code\graph.cpp
+	"graph.h"
+	<fstream>
+	<string>
+
+1522925166 c:\users\thomas\piscine\comprehension_code\graph.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+	"grman/widget.h"
+
+1522770107 c:\users\thomas\piscine\comprehension_code\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522744391 c:\users\thomas\piscine\comprehension_code\grman\grman_couleurs.h
+
+1522744391 c:\users\thomas\piscine\comprehension_code\grman\coords.h
+	<cmath>
+
+1522925141 c:\users\thomas\piscine\comprehension_code\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522744391 source:c:\users\thomas\piscine\comprehension_code\grman\coords.cpp
+	"coords.h"
+
+1522837039 source:c:\users\thomas\piscine\comprehension_code\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522925141 source:c:\users\thomas\piscine\comprehension_code\grman\widget.cpp
+	"widget.h"
+
+1522917049 source:c:\users\thomas\piscine\comprehension_code\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"graph.h"
+

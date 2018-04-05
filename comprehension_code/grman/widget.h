@@ -239,7 +239,7 @@ class WidgetText : public Widget
 class WidgetCheckBox : public Widget
 {
     protected :
-        bool m_value = false;
+        bool m_N = false;
 
     public :
 
@@ -247,8 +247,8 @@ class WidgetCheckBox : public Widget
         virtual void interact_focus();
         virtual bool captures_focus() { return true; }
 
-        bool get_value() { return m_value; }
-        void set_value(bool value) { m_value = value; }
+        bool get_N() { return m_N; }
+        void set_N(bool N) { m_N = N; }
 };
 
 
@@ -260,16 +260,16 @@ class WidgetCheckBox : public Widget
 class WidgetButton : public Widget
 {
     protected :
-        bool m_value = false;
+        bool m_N = false;
 
     public :
 
         virtual void interact_focus();
         virtual bool captures_focus() { return true; }
 
-        bool clicked() { bool clk = m_value; m_value=false; return clk; }
-        bool get_value() { return m_value; }
-        void set_value(bool value) { m_value = value; }
+        bool clicked() { bool clk = m_N; m_N=false; return clk; }
+        bool get_N() { return m_N; }
+        void set_N(bool N) { m_N = N; }
 };
 
 
@@ -281,7 +281,7 @@ class WidgetButton : public Widget
 class WidgetVSlider : public Widget
 {
     protected :
-        double m_value = 0;
+        double m_N = 0;
         double m_min;
         double m_max;
 
@@ -308,9 +308,9 @@ class WidgetVSlider : public Widget
         virtual bool captures_focus() { return true; }
 
         double typed(double v) { return m_integer ? round(v) : v; }
-        double get_value() { return typed(m_value); }
-        void limit_to_range() { if (m_value<m_min) m_value=m_min; if (m_value>m_max) m_value=m_max; }
-        void set_value(double value) { m_value = value; m_value =get_value(); limit_to_range(); }
+        double get_N() { return typed(m_N); }
+        void limit_to_range() { if (m_N<m_min) m_N=m_min; if (m_N>m_max) m_N=m_max; }
+        void set_N(double N) { m_N = N; m_N =get_N(); limit_to_range(); }
         void set_range(double min, double max, bool integer=false) { m_min = min; m_max = max; m_integer = integer; limit_to_range(); }
 };
 

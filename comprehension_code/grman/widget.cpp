@@ -186,7 +186,7 @@ void WidgetText::set_message(std::string message)
 
 void WidgetCheckBox::draw()
 {
-    if (m_value)
+    if (m_N)
     {
         thick_line(m_view, m_view->w/4, m_view->h/4,   m_view->w/2, m_view->h-3, 2, VERT );
         thick_line(m_view, m_view->w-3, 0,            m_view->w/2, m_view->h-3, 2, VERT );
@@ -202,7 +202,7 @@ void WidgetCheckBox::draw()
 void WidgetCheckBox::interact_focus()
 {
     if ( mouse_click )
-        m_value = !m_value;
+        m_N = !m_N;
 
 }
 
@@ -215,7 +215,7 @@ void WidgetCheckBox::interact_focus()
 void WidgetButton::interact_focus()
 {
     if ( mouse_click )
-        m_value = true;
+        m_N = true;
 }
 
 
@@ -231,7 +231,7 @@ void WidgetVSlider::draw()
     thick_line(m_view, m_view->w/2, hhandle,   m_view->w/2, m_view->h-hhandle-1, m_rail_ratio*m_view->w, m_rail_color );
 
     double range_pix = m_view->h - 2*hhandle + 1;
-    double propor = (get_value()-m_min)/(m_max-m_min);
+    double propor = (get_N()-m_min)/(m_max-m_min);
     int ys = m_view->h - hhandle - propor*range_pix ;
 
 
@@ -244,7 +244,7 @@ void WidgetVSlider::interact_focus()
     {
         int hhandle = get_hhandle();
         int yrel = mouse_y - (m_abs_frame.pos.y + get_bp() + hhandle);
-        m_value = m_max-(m_max-m_min)*yrel/(m_view->h-2*hhandle);
+        m_N = m_max-(m_max-m_min)*yrel/(m_view->h-2*hhandle);
         limit_to_range();
     }
 }
@@ -253,13 +253,13 @@ void WidgetVSlider::interact_over()
 {
     if ( key[KEY_UP] )
     {
-        m_value += .01*(m_max-m_min);
+        m_N += .01*(m_max-m_min);
         limit_to_range();
     }
 
     if ( key[KEY_DOWN] )
     {
-        m_value -= .01*(m_max-m_min);
+        m_N -= .01*(m_max-m_min);
         limit_to_range();
     }
 }

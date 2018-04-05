@@ -6,6 +6,15 @@
                     Espece
 ****************************************************/
 
+Espece::Espece()
+{
+
+}
+
+Espece::~Espece()
+{
+
+}
 /// Le constructeur met en place les éléments de l'interface
 EspeceInterface::EspeceInterface(int idx, int x, int y, std::string pic_name, int pic_idx)
 {
@@ -15,14 +24,14 @@ EspeceInterface::EspeceInterface(int idx, int x, int y, std::string pic_name, in
     m_top_box.set_moveable(); //declaration en true ce qui permet de bouger les widget
 
     // Le slider de réglage de valeur
-    m_top_box.add_child( m_slider_value );
-    m_slider_value.set_range(0.0 , 100.0); // Valeurs arbitraires, à adapter...
-    m_slider_value.set_dim(20,80);
-    m_slider_value.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Up);
+    m_top_box.add_child( m_slider_N );
+    m_slider_N.set_range(0.0 , 100.0); // Valeurs arbitraires, à adapter...
+    m_slider_N.set_dim(20,80);
+    m_slider_N.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Up);
 
     // Label de visualisation de valeur
-    m_top_box.add_child( m_label_value );
-    m_label_value.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Down);
+    m_top_box.add_child( m_label_N );
+    m_label_N.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Down);
 
     // Une illustration...
     if (pic_name!="")
@@ -59,11 +68,11 @@ void Espece::pre_update()
     if (!m_interface)
         return;
 
-    /// Copier la valeur locale de la donnée m_value vers le slider associé
-    m_interface->m_slider_value.set_value(m_value);
+    /// Copier la valeur locale de la donnée m_N vers le slider associé
+    m_interface->m_slider_N.set_N(m_N);
 
-    /// Copier la valeur locale de la donnée m_value vers le label sous le slider
-    m_interface->m_label_value.set_message( std::to_string( (int)m_value) );
+    /// Copier la valeur locale de la donnée m_N vers le label sous le slider
+    m_interface->m_label_N.set_message( std::to_string( (int)m_N) );
 }
 
 
@@ -73,8 +82,8 @@ void Espece::post_update()
     if (!m_interface)
         return;
 
-    /// Reprendre la valeur du slider dans la donnée m_value locale
-    m_value = m_interface->m_slider_value.get_value();
+    /// Reprendre la valeur du slider dans la donnée m_N locale
+    m_N = m_interface->m_slider_N.get_N();
 }
 
 
@@ -138,7 +147,7 @@ void Influence::pre_update()
         return;
 
     /// Copier la valeur locale de la donnée m_weight vers le slider associé
-    m_interface->m_slider_weight.set_value(m_weight);
+    m_interface->m_slider_weight.set_N(m_weight);
 
     /// Copier la valeur locale de la donnée m_weight vers le label sous le slider
     m_interface->m_label_weight.set_message( std::to_string( (int)m_weight ) );
@@ -151,7 +160,7 @@ void Influence::post_update()
         return;
 
     /// Reprendre la valeur du slider dans la donnée m_weight locale
-    m_weight = m_interface->m_slider_weight.get_value();
+    m_weight = m_interface->m_slider_weight.get_N();
 }
 
 
@@ -189,13 +198,13 @@ void Graph::sauvergarde_coords( std::string blaz)
 {
     std::ofstream save (blaz.c_str(), std::ios::in | std::ios::trunc);
 
-    save<<m_vertices.size()<<std::endl;
+    save<<m_Espece.size()<<std::endl;
 
 
-    for(int i=0; i<m_vertices.size(); i++)
+    for(int i=0; i<m_Espece.size(); i++)
     {
 
-    save << m_vertices[i].m_value <<" "<< m_vertices[i].m_interface->m_top_box.get_posx() << " " << m_vertices[i].m_interface->m_top_box.get_posx() <<" "<< m_vertices[i].m_interface->m_img.get_pic_name()+"jpg.g" << std::endl;
+    save << m_Espece[i].m_N <<" "<< m_Espece[i].m_interface->m_top_box.get_posx() << " " << m_Espece[i].m_interface->m_top_box.get_posx() <<" "<< m_Espece[i].m_interface->m_img.get_pic_name()+"jpg.g" << std::endl;
 
     }
 
@@ -267,7 +276,7 @@ void Graph::update()
     if (!m_interface)
         return;
 
-    for (auto &elt : m_vertices)
+    for (auto &elt : m_Espece)
         elt.second.pre_update();
 
     for (auto &elt : m_Influences)
@@ -275,7 +284,7 @@ void Graph::update()
 
     m_interface->m_top_box.update();
 
-    for (auto &elt : m_vertices)
+    for (auto &elt : m_Espece)
         elt.second.post_update();
 
         if(key[KEY_S])
@@ -290,9 +299,9 @@ void Graph::update()
 }
 
 /// Aide à l'ajout de sommets interfacés
-void Graph::add_interfaced_Espece(int idx, double value, int x, int y, std::string pic_name, int pic_idx )
+void Graph::add_interfaced_Espece(int idx, double N, int x, int y, std::string pic_name, int pic_idx )
 {
-    if ( m_vertices.find(idx)!=m_vertices.end() )
+    if ( m_Espece.find(idx)!=m_Espece.end() )
     {
         std::cerr << "Error adding Espece at idx=" << idx << " already used..." << std::endl;
         throw "Error adding Espece";
@@ -302,7 +311,7 @@ void Graph::add_interfaced_Espece(int idx, double value, int x, int y, std::stri
     // Ajout de la top box de l'interface de sommet
     m_interface->m_main_box.add_child(vi->m_top_box);
     // On peut ajouter directement des vertices dans la map avec la notation crochet :
-    m_vertices[idx] = Espece(value, vi);
+    m_Espece[idx] = Espece(N, vi);
 }
 
 /// Aide à l'ajout d'arcs interfacés
@@ -314,13 +323,13 @@ void Graph::add_interfaced_Influence(int idx, int id_vert1, int id_vert2, double
         throw "Error adding Influence";
     }
 
-    if ( m_vertices.find(id_vert1)==m_vertices.end() || m_vertices.find(id_vert2)==m_vertices.end() )
+    if ( m_Espece.find(id_vert1)==m_Espece.end() || m_Espece.find(id_vert2)==m_Espece.end() )
     {
-        std::cerr << "Error adding Influence idx=" << idx << " between vertices " << id_vert1 << " and " << id_vert2 << " not in m_vertices" << std::endl;
+        std::cerr << "Error adding Influence idx=" << idx << " between vertices " << id_vert1 << " and " << id_vert2 << " not in m_Espece" << std::endl;
         throw "Error adding Influence";
     }
 
-    InfluenceInterface *ei = new InfluenceInterface(m_vertices[id_vert1], m_vertices[id_vert2]);
+    InfluenceInterface *ei = new InfluenceInterface(m_Espece[id_vert1], m_Espece[id_vert2]);
     m_interface->m_main_box.add_child(ei->m_top_Influence);
     m_Influences[idx] = Influence(weight, ei);
 }
