@@ -1,0 +1,351 @@
+# depslib dependency file v1.0
+1522744391 source:c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\grman\coords.cpp
+	"coords.h"
+
+1522744391 c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\grman\coords.h
+	<cmath>
+
+1522744391 source:c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\grman\widget.cpp
+	"widget.h"
+
+1522744391 c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522744391 c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522744391 c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\grman\grman_couleurs.h
+
+1522744390 source:c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\graph.cpp
+	"graph.h"
+
+1522744390 c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\graph.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+
+1522744391 source:c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522744391 source:c:\users\thomas\documents\ece paris\ing 2\info\help piscine\graph_lib_exemple_graph\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"graph.h"
+
+1522921559 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\graph.cpp
+	"graph.h"
+	<fstream>
+	<string>
+
+1522922028 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\graph.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+	"grman/widget.h"
+
+1522770107 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522744391 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\grman\grman_couleurs.h
+
+1522744391 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\grman\coords.h
+	<cmath>
+
+1522921155 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522744391 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\grman\coords.cpp
+	"coords.h"
+
+1522837039 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522921155 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\grman\widget.cpp
+	"widget.h"
+
+1522917049 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\help piscine\comprehension code\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"graph.h"
+
+1522924779 source:c:\users\anne-lise hervé\piscine\comprehension_code\graph.cpp
+	"graph.h"
+	<fstream>
+	<string>
+
+1522924764 c:\users\anne-lise hervé\piscine\comprehension_code\graph.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+	"grman/widget.h"
+
+1522925326 c:\users\anne-lise hervé\piscine\comprehension_code\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522923140 c:\users\anne-lise hervé\piscine\comprehension_code\grman\grman_couleurs.h
+
+1522923140 c:\users\anne-lise hervé\piscine\comprehension_code\grman\coords.h
+	<cmath>
+
+1522924223 c:\users\anne-lise hervé\piscine\comprehension_code\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522923140 source:c:\users\anne-lise hervé\piscine\comprehension_code\grman\coords.cpp
+	"coords.h"
+
+1522925326 source:c:\users\anne-lise hervé\piscine\comprehension_code\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522924223 source:c:\users\anne-lise hervé\piscine\comprehension_code\grman\widget.cpp
+	"widget.h"
+
+1522923140 source:c:\users\anne-lise hervé\piscine\comprehension_code\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"graph.h"
+
+1522923140 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\coords.cpp
+	"coords.h"
+
+1522923140 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\coords.h
+	<cmath>
+
+1522925326 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522925326 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522923140 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\grman_couleurs.h
+
+1522947523 c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522924223 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\grman\widget.cpp
+	"widget.h"
+
+1522949014 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\graph.cpp
+	"Graph.h"
+	<fstream>
+	<string>
+
+1522947282 c:\users\anne-lise hervé\piscine\comprehension_code_al\graph.h
+	<vector>
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+	"grman/widget.h"
+
+1522945146 source:c:\users\anne-lise hervé\piscine\comprehension_code_al\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"Graph.h"
+
+1523027865 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\graph.cpp
+	"Graph.h"
+	<fstream>
+	<string>
+
+1523023459 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\graph.h
+	<vector>
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+	"grman/widget.h"
+
+1523023459 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1523023459 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\grman\grman_couleurs.h
+
+1523023459 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\grman\coords.h
+	<cmath>
+
+1523023459 c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1523023459 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\grman\coords.cpp
+	"coords.h"
+
+1523023459 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1523023459 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\grman\widget.cpp
+	"widget.h"
+
+1523027925 source:c:\users\thomas\documents\ece paris\ing 2\info\semestre 2\comprehension_code_cool\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"Graph.h"
+
+1523181075 source:c:\users\domin\documents\code blocks\surprise\graph.cpp
+	"Graph.h"
+	<fstream>
+	<string>
+	<stack>
+	<vector>
+
+1523179818 c:\users\domin\documents\code blocks\surprise\graph.h
+	<vector>
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+	"grman/widget.h"
+
+1523023460 c:\users\domin\documents\code blocks\surprise\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1523023460 c:\users\domin\documents\code blocks\surprise\grman\grman_couleurs.h
+
+1523023460 c:\users\domin\documents\code blocks\surprise\grman\coords.h
+	<cmath>
+
+1523023460 c:\users\domin\documents\code blocks\surprise\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1523023460 source:c:\users\domin\documents\code blocks\surprise\grman\coords.cpp
+	"coords.h"
+
+1523023460 source:c:\users\domin\documents\code blocks\surprise\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1523023460 source:c:\users\domin\documents\code blocks\surprise\grman\widget.cpp
+	"widget.h"
+
+1523119961 source:c:\users\domin\documents\code blocks\surprise\main.cpp
+	"grman/grman.h"
+	<iostream>
+	"Graph.h"
+
